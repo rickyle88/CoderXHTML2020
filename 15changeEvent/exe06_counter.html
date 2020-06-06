@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Step number</h1>
+    
+    <button id="decrease">-</button>
+    <div id="divNumber"></div>
+    <button id="increase">+</button>
+
+    <script>
+        let btnDecrease = document.getElementById('decrease');
+        let divNumber = document.getElementById('divNumber');
+        let btnIncrease = document.getElementById('increase');
+
+        btnDecrease.addEventListener('click', minus);
+        btnIncrease.addEventListener('click', plus);
+
+        let count = 0;
+
+        function minus(){
+            
+            count--;
+            // console.log(count);
+            divNumber.innerHTML = count;
+        }
+
+        function plus(){
+            
+            count++;
+            // console.log(count);
+            divNumber.innerHTML = count;
+        }
+    </script>
+</body>
+</html>

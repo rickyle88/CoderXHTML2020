@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnClick">Click me</button>
+    <p id="sentence"></p>
+
+    <script>
+        let btnClick = document.getElementById('btnClick');
+        let sentence = document.getElementById('sentence');
+
+        // btnClick.addEventListener('click', displayText);
+        btnClick.addEventListener('click', displayText);
+        // var display = false;
+        function displayText(){
+            if(sentence.innerHTML === 'Hello'){
+                sentence.innerHTML = '';
+                console.log('1');
+            }else{
+                sentence.innerHTML = 'Hello';
+                console.log('2');
+            }
+        }
+    </script>
+</body>
+</html>

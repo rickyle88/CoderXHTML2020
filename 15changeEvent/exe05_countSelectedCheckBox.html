@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Select city</h2>
+    <input type="checkbox" id="city1" name="city1" value="Hanoi" />
+    <label for="city1">Ha Noi</label><br />
+    <input type="checkbox" id="city2" name="city2" value="HaiPhong" />
+    <label for="city2">Hai Phong</label><br />
+    <input type="checkbox" id="city3" name="city3" value="DaNang" />
+    <label for="city3">Da Nang</label><br />
+    <input type="checkbox" id="city4" name="city4" value="HoChiMinh" />
+    <label for="city4">Ho Chi Minh</label><br />
+
+    <hr />
+
+    <p>You select <span id="city-count"></span> city</p>
+    <script>
+
+        var city1 = document.getElementById('city1');
+        var city2 = document.getElementById('city2');
+        var city3 = document.getElementById('city3');
+        var city4 = document.getElementById('city4');
+
+        var cityCount = document.getElementById('city-count');
+
+        var cityArray = [city1, city2, city3, city4];
+
+        city1.addEventListener('click', count);
+        city2.addEventListener('click', count);
+        city3.addEventListener('click', count);
+        city4.addEventListener('click', count);
+
+        // var count = 0;
+        function count(){
+            let count = 0;
+            for(let city of cityArray){
+                if(city.checked){
+                    count++;
+                }
+            }
+
+            cityCount.innerHTML = count;
+        }
+
+
+    </script>
+</body>
+
+</html>

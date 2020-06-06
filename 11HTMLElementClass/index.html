@@ -1,0 +1,39 @@
+<!-- 
+    HTML element
+
+    .children       Element
+    .textContent    Node
+
+    .appendChild()  Node
+    .remove()       Element
+
+    document.
+ -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TODO list</h1>
+    <ul id="todo-list">
+        <li>Hair cut</li>
+        <li>Lunch with Sora</li>
+        <li>Dinner with Maria</li>
+    </ul>
+    <script>
+        var todoList = document.getElementById('todo-list');
+
+
+        // $0.children
+        // HTMLCollection(3) [li, li, li]
+
+        var newTodo = document.createElement('li');
+        todoList.appendChild(newTodo);
+
+        
+    </script>
+</body>
+</html>

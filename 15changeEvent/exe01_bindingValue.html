@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Binding value</h1>
+    <p id="paragraph-1"></p>
+
+    <input id="input-1">
+
+    <script>
+        let paragraph1 = document.getElementById('paragraph-1');
+        let inputBox = document.getElementById('input-1');
+
+        inputBox.addEventListener('keyup', bindingValue);
+
+        function bindingValue(){
+            paragraph1.textContent ='Hello, ' +  inputBox.value;            
+        }
+    </script>
+</body>
+</html>

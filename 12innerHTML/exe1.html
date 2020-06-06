@@ -1,0 +1,38 @@
+<!-- 
+- Sử dụng getElementsByTagName() để lấy ra danh sách các <p> có class là 'foo'
+- Lặp qua các phần tử và thay đổi nội dung của từng phần tử bằng cách append (thêm vào cuối) một đường link tới coders.tokyo site
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="foo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi praesentium aliquam voluptatibus
+        exercitationem at distinctio aliquid autem libero ex voluptates nisi ullam earum tempora est beatae, fuga
+        nesciunt, totam dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi praesentium aliquam voluptatibus exercitationem
+        at distinctio aliquid autem libero ex voluptates nisi ullam earum tempora est beatae, fuga nesciunt, totam
+        dolore.</p>
+    <p class="foo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi praesentium aliquam voluptatibus
+        exercitationem at distinctio aliquid autem libero ex voluptates nisi ullam earum tempora est beatae, fuga
+        nesciunt, totam dolore.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi praesentium aliquam voluptatibus exercitationem
+        at distinctio aliquid autem libero ex voluptates nisi ullam earum tempora est beatae, fuga nesciunt, totam
+        dolore.</p>
+    <p class="foo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi praesentium aliquam voluptatibus
+        exercitationem at distinctio aliquid autem libero ex voluptates nisi ullam earum tempora est beatae, fuga
+        nesciunt, totam dolore.</p>
+
+    <script>
+        var pClassFoo = document.querySelectorAll('p.foo');
+        for (var item of pClassFoo) {
+            item.innerHTML += '<a href="https://coders.tokyo/">Coders.Tokyo</a>';
+        }
+    </script>
+</body>
+
+</html>
