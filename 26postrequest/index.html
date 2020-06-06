@@ -23,7 +23,7 @@
     <!-- Internal javascript -->
     <script>
         // Declare URL contains json data
-        let url = 'http://localhost:9082/todos';
+        let url = 'http://localhost:9081/todos';
 
         axios.get(url).then(function (res) {
             // Save response array into items
@@ -50,12 +50,11 @@
                 newObject.id = Math.round(Math.random() * 100000);
                 newObject.content = newItem;
 
-                axios.post('http://localhost:9082/todos', newObject)
+                axios.post(url, newObject)
                     .then(function (response) {
                         console.log(response);
-                    })
-                    .then(function () {
-                        // Re-render
+
+                        // Rerender
                         axios.get(url).then(function (res) {
                             // Save response array into items
                             let items = res.data;
@@ -65,7 +64,6 @@
 
                         })
                     })
-
             }
 
 
